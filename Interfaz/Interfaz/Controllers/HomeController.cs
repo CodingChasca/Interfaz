@@ -18,5 +18,10 @@ namespace Interfaz.Controllers
         {
             return View();
         }
+
+        public ActionResult FollowersCount()
+        {
+            return View();
+        }
     }
 }

@@ -1,14 +1,21 @@
 ﻿
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>SocialNetwork</title>
+    Selecciona la red social con que trabajarás.
+
+    @{var listItems = new List<SelectListItem>
+    {
+          new SelectListItem { Text = "Exemplo1", Value="Exemplo1" },
+          new SelectListItem { Text = "Exemplo2", Value="Exemplo2" },
+          new SelectListItem { Text = "Exemplo3", Value="Exemplo3" }
+    };
+    }
+    @Html.DropDownList("Exemplo", new SelectList(listItems, "Value", "Text"))
+
 </head>
 <body>
     <div> 

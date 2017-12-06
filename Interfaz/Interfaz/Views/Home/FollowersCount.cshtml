@@ -2,20 +2,53 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>FollowersCount</title>
+    <style>
+        body {
+            background-image: url("~/../../Images/fondo.jpg");
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .contenedor {
+            position: fixed;
+            top: 45%;
+            left: 40%;
+            background: #2cabb2;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .boton {
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            border: 1px solid transparent;
+        }
+    </style>
 </head>
 <body>
-    <div> 
-        Nombre de usuario: 
-        @Html.TextBox("Name")
-        <input type="button" value="Obtener seguidores" />
-        @Html.Label("Aquí irá un numerito")
+    <div class="contenedor">
+        <p>Nombre de usuario:</p>
+        <p>
+            @Html.TextBox("Name")
+        </p>
+        <input type="button" class="boton" value="Obtener seguidores" />
+        <p>@Html.Label("Aquí irá un numerito")</p>
     </div>
 </body>
 </html>

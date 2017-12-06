@@ -44,11 +44,18 @@
 <body>
     <div class="contenedor">
         <p>Nombre de usuario:</p>
-        <p>
-            @Html.TextBox("Name")
-        </p>
-        <input type="button" class="boton" value="Obtener seguidores" />
-        <p>@Html.Label("Aquí irá un numerito")</p>
+        @using (Html.BeginForm("GetUsername", "Home", FormMethod.Post))
+        {
+            <div>
+                <p>
+                    <input type="text" name="Name" id="Name" />
+                </p>
+                <input type="submit" value="Obtener seguidores" />
+            </div>
+            @ViewBag.Likes
+        }
+
+        <input type="button" value="Actualizar" onclick="location.href='@Url.Action("UpdateFollowers", "Home")'"
     </div>
 </body>
 </html>

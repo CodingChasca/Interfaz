@@ -59,9 +59,7 @@
         <p>
             @{var listItems = new List<SelectListItem>
             {
-              new SelectListItem { Text = "Twitter", Value="Exemplo1" },
-              new SelectListItem { Text = "Facebook", Value="Exemplo2" },
-              new SelectListItem { Text = "Instagram", Value="Exemplo3" }
+              new SelectListItem { Text = "Twitter", Value="Twitter" },
             };
             }
             @Html.DropDownList("Exemplo", new SelectList(listItems, "Value", "Text"))

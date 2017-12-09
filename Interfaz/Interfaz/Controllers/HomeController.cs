@@ -56,6 +56,7 @@ namespace Interfaz.Controllers
         {
             string res = null;
             HttpClient client = new HttpClient();
+            
             HttpResponseMessage response = await client.GetAsync(path);
             if (response.IsSuccessStatusCode)
             {
